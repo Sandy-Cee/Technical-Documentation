@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Technical Documentation Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+  <head>
+    	<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  	<body>
+    	<nav id="navbar">
+<header>Introduction to CSS</header>
+<ul>
+<li><a class="nav-link" href="#What_is_CSS?">What is CSS?</a></li>
+<li><a class="nav-link" href="#How_to_add_CSS">How to add CSS</a></li>
+<li><a class="nav-link" href="#CSS_syntax">CSS syntax</a></li>	  
+<li><a class="nav-link" href="#CSS_selectors">CSS selectors</a></li>
+<li><a class="nav-link" href="#CSS_colors">CSS colors</a></li>
+<li><a class="nav-link" href="#CSS_background">CSS background</a></li>
+<li><a class="nav-link" href="#CSS_border">CSS border</a></li>
+<li><a class="nav-link" href="#CSS_box_model">CSS box model</a></li>
+<li><a class="nav-link" href="#CSS_comments">CSS comments</a></li>
+
+<li><a class="nav-link" href="#Summary">Summary</a></li>
+  
+<li><a class="nav-link" href="#References">References</a></li>
+</ul>
+</nav>
+<main id="main-doc">
+<section class="main-section" id="What_is_CSS?">
+  	<header>What is CSS?</header>
+  	<article>
+    	<p>Like HTML, CSS (Cascading Style Sheets) is not a programming language. It’s not a markup language either. CSS is a style sheet language. CSS is used to selectively style HTML elements.</p>
+      <br>
+    	<p>CSS can be used for very basic document text styling — for example, for changing the color and size of headings and links. It can be used to create a layout — for example, turning a single column of text into a layout with a main content area and a sidebar for related information. It can even be used for effects such as animation. </p>
+  </article>
+</section>
+
+<section class="main-section" id="How_to_add_CSS">
+  	<header>How to add CSS</header>
+  	<article>
+    <p> When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet.</p>
+<h3>Three Ways to Insert CSS</h3>
+  <ul class="inserts">
+  <li>External CSS</li>
+  <li>Internal CSS</li>
+  <li>Inline CSS</li>
+  </ul>
+<br>
+  <p><strong>Priority order -- <em>Inline > Internal > External</em></strong></p>
+<br> 
+<h3>External CSS</h3>
+    <p>With an external style sheet, the look of an entire website can be altered by changing just one file. Each HTML page must include a reference to the external style sheet file inside the &lt;link&gt; element, inside the &lt;head&gt; section. An external style sheet can be written in any text editor and must be saved with a .css extension. The external .css file should not contain any HTML tags.</p>
+    
+	<h3>Internal CSS</h3>
+	    <p>An internal style sheet may be used if one single HTML page has a unique style. The internal style is defined within the &lt;style&gt; element, inside the &lt;head&gt; section of an HTML page.</p>
+
+	<h3>Inline CSS</h3>
+
+	    <p>An inline style may be used to apply a unique style for a single element. To use inline styles, the &lt;style&gt; attribute is added to the relevant element. The style attribute can contain any CSS property.</p>
+<br>
+	<div class=”tip”>
+	<p> <i class="fa-solid fa-circle-info fa-1.5x"></i><strong> Tip: </strong>An inline style loses many of the advantages of a style sheet (by mixing content with presentation). This method should be used sparingly.</p>
+	</div>
+</article>
+</section>
+
+<section class="main-section" id="CSS_syntax">
+  	<header>CSS syntax</header>
+  	<article>
+    	<p>CSS is a rule-based language — rules are defined by specifying groups of styles that should be applied to individual elements or groups of elements on a web page.</p>
+      <br>
+    	<p>For example, the main heading on the web page can be shown as large red text. The following code shows a very simple CSS rule that would achieve the styling described above:</p>
+    	<div>
+        <pre>
+      	<code>h1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { color: red;&nbsp;font-size: 5em; }
+selector {property:value;property:value}</code>
+</pre>
+</div>
+<ul>
+  	<li class="bullet">In the above example, the CSS ruleset opens with a selector. This selects the HTML element to be styled. In this case, styling level one headings (&lt;h1&gt;).</li>
+  	<li class="bullet">Then a set of curly braces are added { }.</li>
+  	<li class="bullet">Inside the braces will be one or more declarations, which take the form of property and property value pairs. The property is specified (color in the above example) before the colon, and then the value of the property after the colon (red in this example).</li>
+  	<li class="bullet">This example contains two declarations, one for color and the other for font-size. Each pair specifies a property of the element(s) selected (&lt;h1&gt;) in this case), then a value desired for the property.</li>
+</ul>
+<br>
+<p>CSS properties have different allowable values, depending on which property is being specified. In the example, there is the color property, which can take various color values. There is also the font-size property. This property can take various size units as a value (use "em" and "rem" units as they are both scalable; "px" is not).</p>
+<br>
+<p>A CSS stylesheet will contain many such rules, written one after the other:</p>
+<div>
+  <pre>
+<code>
+h1 { color: red; font-size: 5em; } 
+p { color: black; }
+</code>
+</pre>
+</div>
+
+<p> Multiple elements can also be selected and then a single ruleset applied to all of them at once. Multiple selectors are separated by commas. For example:</p>
+
+<div>
+<pre>
+  <code>
+p, li, h1 { color: red }
+</code>
+</pre>
+</div>
+</article>
+</section>
+
+
+<section class="main-section" id="CSS_selectors">
+<header>CSS selectors</header>
+
+<p>CSS selectors are used to "find" (or select) the HTML elements to be styled.</p>
+
+	<ul>
+    <li class="bullet"> Three simple selectors:</li>
+		<ul>
+		<li class="inset-bullet">Element Selector</li>
+		<li class="inset-bullet">Id Selector</li>
+		<li class="inset-bullet">Class Selector</li>
+	</ul>
+  </ul>
+
+  <br>
+
+	<p><strong>Priority of Selectors - <em>Id > Class > Element</em></strong></p>
+  <br>
+<h3>Element Selector</h3>
+	<p>This selector is used to select HTML elements by its name. For example:</p>
+  <div>
+<pre>
+	<code>
+h1 { color: red; }
+	</code>
+  </pre>
+  </div>
+<p>The heading tag was selected to change the color property i.e., text color, to red. Now whatever is written in this tag (content) will have the text color as red.</p>
+
+<h3>ID Selector</h3>
+	<p>This selector is used to target specific or unique elements that have been given an “id” in html. For example:</p>
+  <div>
+<pre>
+	<code>
+#unique { color:red; }
+	</code>
+</pre>
+</div>
+	<p>The id tag was selected to change the color property i.e., text color, to red. Now whatever is written in this tag (content) will have the text color as red.</p>
+
+<h3>Class Selector</h3>
+	<p>This selector is used to target a specific class of the html element. For example:</p>
+  <div>
+<pre>
+	<code>
+.group { color: red; }
+	</code>
+  </pre>
+  </div>
+
+<p>The class tag was selected to change the color property i.e., text color, to red. Now whatever is written in this tag (content) will have the text color as red.</p>
+</article>
+</section>
+<section class="main-section" id="CSS_colors">
+<header>CSS colors</header><article>
+
+<p>There are different colouring schemes in CSS, with the main three as follows:</p>
+<ul>
+<li class="bullet"><strong>RGB</strong></li>
+	<ul><li class="inset-bullet">This starts with rgb and takes 3 parameters, corresponding to red, green and blue, with each parameter value varying from 0 to 255. For example, rgb(255, 0, 0); means the color red.</li></ul>
+
+<li class="bullet"><strong>HEX</strong></li>
+	<ul><li class="inset-bullet">Hex code starts with # and comprises of 6 numbers which are further divided into 3 sets of 2 numbers, corresponding to red, green, and blue, with the single set values varying from 00 to 99 and AA to FF. For example, #ff0000; means the color red.</li></ul>
+
+<li class="bullet"><strong>RGBA</strong></li>
+	<ul><li class="inset-bullet">This starts with rgb and takes 4 parameters, corresponding to red, green, blue, and alpha (this a value represents the level of transparency/opacity of the color), with the value of the first three parameters varying from 0 to 255, and the last parameter ranging from 0.0 to 1.0; 0.0 being fully transparent, 1.0 being fully opaque. For example, rgba(255, 0, 0, 0); means the color red and transparent.</li></ul>
+  </ul>
+</article>
+</section>
+
+<section class="main-section" id="CSS_background">
+<header>CSS background</header>
+<article>
+<p>There are a few different ways by which CSS can have an effect on HTML elements. 
+</p>
+<br>
+<p>A few of them are as follows:</p>
+	<ul>
+	<li class="bullet">Color</li> <ul><li class="inset-bullet">used to set the color of the background</li></ul>
+	<li class="bullet">Repeat</li> <ul><li class="inset-bullet">used to determine if the image has to repeat or not and if it is repeating then how it should do that</li></ul>
+	<li class="bullet">Image</li> <ul><li class="inset-bullet">used to set an image as the background</li></ul>
+	<li class="bullet">Position</li> <ul><li class="inset-bullet">used to determine the position of the image</li></ul>
+	<li class="bullet">Attachment</li> <ul><li class="inset-bullet">it basically helps in controlling the mechanism of scrolling</li></ul>
+	</ul>
+</article>
+</section>
+
+<section class="main-section" id="CSS_border">
+<header>CSS border</header>
+<article>
+<p>There are 4 properties that can help in setting up the border:</p>
+	<ul>
+	<li class="bullet">Width</li> <ul><li class="inset-bullet">sets the width of the border</li></ul>
+	<li class="bullet">Style</li> <ul><li class="inset-bullet">sets the style of border; e.g. solid, dashed, etc.</li></ul>
+	<li class="bullet">Color</li><ul><li class="inset-bullet">sets the color of the border</li></ul>
+	<li class="bullet"> Radius</li> <ul><li class="inset-bullet">determines the roundness of the border</li></ul>
+<br>
+<p>Borders can be set specifically for top, right, bottom, and left. The top and bottom can be clubbed together as well as the left and right. E.g.: border-width: 2px 5px; (sets top and bottom to 2px, with left and right set to 5px). Borders can also be set in a single line. E.g.: border: 2px solid black;</p>
+
+</article>
+</section>
+
+<section class="main-section" id="CSS_box_model">
+<header>CSS box model</header>
+<article>
+
+<p>Every element is CSS can be represented using the BOX model, which allows a border and defined space between the content. </p>
+<br>
+<p>Helping the developer to develop and manipulate the elements, it consists of 4 edges:</p>
+<ul>
+	<li class="bullet">Content edge</li> <ul><li class="inset-bullet">comprising of the actual content</li></ul>
+	<li class="bullet">Padding edge</li> <ul><li class="inset-bullet">padding lies in between content and border edge</li></ul>
+	<li class="bullet">Border edge</li> <ul><li class="inset-bullet">the border follows padding</li></ul>
+	<li class="bullet">Margin edge</li> <ul><li class="inset-bullet">this is an outside border and controls the margin of the element</li></ul>
+<br>
+<div class=”tip”>
+<p><i class="fa-solid fa-circle-info fa-1.5x"></i><strong> Tip: </strong>In the Google Chrome browser, right-click and click "Inspect". This will display all the elements used in the HTML file. On the right-hand side, there will be a box model displayed, with the CSS parameters indicated. The most inner rectangle represents the content, the padding is the space between the content and the border, with the margin area outside the border.</p>
+</article>
+</section>
+
+<section class="main-section" id="CSS_comments">
+  <header>CSS comments</header>
+  <article>
+    <p>CSS comments are ignored by browsers and are therefore not displayed on the web page. They are added to help understand the code and make it readable, as well as helping to debug. It is also helpful when editing the source code at a later date.</p>
+<br>
+<p>A CSS comment is placed inside the &lt;style&gt; element, and starts with /* and ends with */:</p>
+<br>
+<div>
+<h4>Example</h4>
+<pre><code>
+/* This is a single-line comment */
+p { color: red; }
+</code></pre></div>
+<br>
+<p>You can add comments whenever you want in the code:</p>
+<br>
+<div>
+<h4>Example</h4>
+<pre><code>
+p { color: red; /* Set text color to red */ }
+</code></pre></div>
+<br>
+<p>Comments can also span multiple lines:</p>
+<br>
+<div>
+<h4>Example</h4>
+<pre>
+<code>
+/* This is a multi-line
+comment */
+p { color: red; }
+</code></pre></div>
+  </article>
+</section>
+
+<section class="main-section" id="Summary">
+  <header>Summary</header>
+  	<article>
+    	<p>CSS (Cascading Style Sheets) is a design language that makes a website look more appealing than just plain text. Whereas HTML largely determines textual content, CSS determines visual structure, layout, and aesthetics. HTML is a markup language, and CSS is a style sheet language. Think "look and feel" when you think CSS. </p> <br>
+<p>If HTML were the engine components of a car, CSS would be the body style and the paint job. A website can run without CSS, but it certainly isn’t pretty.</p> <br>
+<p>CSS makes the front-end of a website shine and it creates a great user experience. Without CSS, websites would be less pleasing to the eye and likely much harder to navigate. In addition to layout and format, CSS is responsible for font color and more.</p>
+<br>
+<p>The benefits of CSS include:</p>
+<ol class="summary-list">
+	<li><strong>Faster Page Speed</strong> – More code means slower page speed. CSS enables you to use less code. CSS allows you to use one CSS rule and apply it to all occurrences of a certain tag within an HTML document.</li>
+<li><strong>Better User Experience</strong> - CSS not only makes web pages easy on the eye, it also allows for user-friendly formatting. When buttons and text are in logical places and well organized, user experience improves.</li>
+<li><strong>Quicker Development Time</strong> - With CSS, you can apply specific formatting rules and styles to multiple pages with one string of code. One cascading style sheet can be replicated across several website pages. If, for instance, you have product pages that should all have the same formatting, look, and feel, writing CSS rules for one page will suffice for all pages of that same type. 
+<li><strong>Easy Formatting Changes</strong> - If you need to change the format of a specific set of pages, it’s easy to do so with CSS. There’s no need to fix every individual page. Just edit the corresponding CSS stylesheet and you’ll see changes applied to all the pages that are using that style sheet.</li>
+<li><strong>Compatibility Across Devices</strong> - Responsive web design matters. In today’s day and age, web pages must be fully visible and easily navigable on all devices. Whether mobile or tablet, desktop or even smart TV, CSS combines with HTML to make responsive design possible.
+</li>
+<br>
+<p>CSS is critical when it comes to the overall presentation of a web page. It makes web developers’ lives much easier when it comes to formatting. Mastering CSS is a vital part of becoming a valuable asset and a solid programmer. </p>
+</article>
+</section>
+
+<section class="main-section" id="References">
+  <header>References</header>
+  <article>
+    <div>
+    <ul class="reference-list">
+      <li>
+<a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+<li><a href="https://www.w3schools.com" target="_blank">w3schools.com</a></li>
+<li><a href="https://www.mygreatlearning.com" target="_blank">mygreatlearning.com</a></li>
+<li><a href="https://devmountain.com" target="_blank">devmountain.com</a></li>
+
+    </ul></div>
+  </article>
+</section>
+
+</main>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
